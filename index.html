@@ -56,47 +56,50 @@
                 <a href="#side-nav" class="uk-navbar-toggle " data-uk-offcanvas></a>
             </div>
         </nav>
-    </div>
-    <!-- side-navigation -->
-    <div id="side-nav" class="uk-offcanvas" aria-hidden="flase">
-        <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
-            <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav="">
-                <li><a href="#">Item</a></li>
-                <li class="uk-active"><a href="">Active</a></li>
-                <li class="uk-parent" aria-expanded="false">
-                    <a href="#">Parent</a>
-                    <div style="overflow:hidden;height:0;position:relative;" class="">
+        <!-- side-navigation 侧面隐藏导航栏-->
+        <div id="side-nav" class="uk-offcanvas" aria-hidden="flase">
+            <div class="uk-offcanvas-bar uk-offcanvas-bar-show">
+                <ul class="uk-nav uk-nav-offcanvas uk-nav-parent-icon" data-uk-nav>
+                    <li>
+                        <form class="uk-search">
+                            <input class="uk-search-field" type="search" placeholder="search...">
+                        </form>
+                    </li>
+                    <li><a href=""><i class="uk-icon-home"></i> Home</a></li>
+                    <li class="uk-nav-header">blog</li>
+                    <li class="uk-parent" aria-expanded="false">
+                        <a href="#"><i class="uk-icon-list"></i> Categories</a>
                         <ul class="uk-nav-sub">
-                            <li><a href="">Sub item</a></li>
-                            <li><a href="">Sub item</a>
+                            <li>
+                                <a href="">Programming <span class="uk-badge uk-badge-danger uk-align-medium-right">2</span></a>
                                 <ul>
-                                    <li><a href="">Sub item</a></li>
-                                    <li><a href="">Sub item</a></li>
+                                    <li><a href="">Python<span class="uk-badge uk-badge-notification">2</span></a></li>
+                                    <li><a href="">Mysql</a></li>
                                 </ul>
                             </li>
+                            <li><a href="">Travel <span class="uk-badge uk-badge-success uk-align-right">6</span></a></li>
                         </ul>
-                    </div>
-                </li>
-                <li class="uk-parent" aria-expanded="false">
-                    <a href="#">Parent</a>
-                    <div style="overflow:hidden;height:0;position:relative;" class="">
+                    </li>
+                    <li class="uk-parent" aria-expanded="false" data-uk-dropdown="{mode:'click'}">
+                        <a href="#"><i class="uk-icon-archive"></i> Archives</a>
+                        <!-- <div style="overflow:hidden;height:0;position:relative;" class="uk-dropdown uk-dropdown-navbar"> -->
                         <ul class="uk-nav-sub">
-                            <li><a href="">Sub item</a></li>
-                            <li><a href="">Sub item</a></li>
+                            <li><a href="">Sub Archive1</a></li>
+                            <li><a href="">Sub Archive2</a>
+                            </li>
                         </ul>
-                    </div>
-                </li>
-                <li><a href="">Item</a></li>
-                <li class="uk-nav-header">Header</li>
-                <li class="uk-parent"><a href=""><i class="uk-icon-star"></i> Parent</a></li>
-                <li><a href=""><i class="uk-icon-twitter"></i> Item</a></li>
-                <li class="uk-nav-divider"></li>
-                <li><a href=""><i class="uk-icon-rss"></i> Item</a></li>
-            </ul>
+                        <!-- </div> -->
+                    </li>
+                    <li class="uk-nav-header">Shop</li>
+                    <li class="uk-nav-divider"></li>
+                    <li><a href=""><i class="uk-icon-info-circle"></i> About</a></li>
+                    <li><a href=""><i class="uk-icon-phone-square"></i> contact</a></li>
+                </ul>
+            </div>
         </div>
     </div>
     <!-- main -->
-    <div class="uk-container">
+    <div class="uk-container uk-container-center">
         <div class="uk-grid" data-uk-grid-margin="">
             <div class="uk-width-medium-3-4">
                 <article class="uk-article">
@@ -113,18 +116,8 @@
                     <p><a href="/blog/{{ blog.id }}">继续阅读 <i class="uk-icon-angle-double-right"></i></a></p>
                 </article>
                 <hr class="uk-article-divider">
-                <!-- pagination -->
-                <div>
-                	<ul class="uk-pagination" data-uk-pagination="{items:100, itemsOnPage:10}"></ul>
-                </div>
-                
             </div>
             <div class="uk-width-medium-1-4">
-                <!-- <div class="uk-panel uk-panel-box uk-text-center">
-                    <img class="uk-border-circle" width="120" height="120" src="" alt="">
-                    <h3>Author Name</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut.</p>
-                </div> -->
                 <div class="uk-panel">
                     <h3 class="uk-panel-title">Archives</h3>
                     <ul class="uk-list uk-list-line">
@@ -135,9 +128,9 @@
                         <li><a href="#">September 2013</a></li>
                     </ul>
                 </div>
-                <div class="uk-panel">
-                    <h3 class="uk-panel-title">Social Links</h3>
-                    <ul class="uk-list">
+                <div class="uk-panel uk-panel-header">
+                    <h3 class="uk-panel-title uk-h3">Social Links</h3>
+                    <ul class="uk-list uk-list-line">
                         <li><a href="#">GitHub</a></li>
                         <li><a href="#">Twitter</a></li>
                         <li><a href="#">Facebook</a></li>
@@ -145,6 +138,32 @@
                 </div>
             </div>
         </div>
+        <!-- pagination -->
+        <!-- <ul class="uk-pagination" data-uk-pagination="">
+            <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+            <li class="uk-active"><span>1</span></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><span>...</span></li>
+            <li><a href="#">20</a></li>
+            <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+        </ul> -->
+        <ul class="uk-pagination" data-uk-pagination="{items:100, itemsOnPage:10, currentPage:1}">
+            <!-- <li class="uk-pagination-previous"><a href=""></a></li>
+            <li class="uk-pagination-next"><a href=""></a></li> -->
+            <li><a href="#"><i class="uk-icon-angle-double-left"></i></a></li>
+            <li><a href="#page-1" data-page="0">1</a></li>
+            <li><a href="#page-2" data-page="1">2</a></li>
+            <li><a href="#page-3" data-page="2">3</a></li>
+            <li><span>...</span></li>
+            <li><a href="#page-73" data-page="7">7</a></li>
+            <li class="uk-active"><span>8</span></li>
+            <li><a href="#page-75" data-page="9">9</a></li>
+            <li><span>...</span></li>
+            <li><a href="#page-98" data-page="10">10</a></li>
+            <li><a href="#"><i class="uk-icon-angle-double-right"></i></a></li>
+        </ul>
     </div>
     <!-- footer -->
     <footer>
@@ -167,6 +186,7 @@
     <!-- script -->
     <script src="static/js/jquery.js"></script>
     <script src="static/js/uikit.js"></script>
+    <script src="static/js/components/search.js"></script>
 </body>
 
 </html>
